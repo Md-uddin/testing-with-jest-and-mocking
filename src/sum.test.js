@@ -6,7 +6,7 @@ it("should add both parameters", function () {
   expect(result).toBe(3);
 });
 
-describe("when a & b is strings", function () {
+test("when a & b is strings", function () {
   const restult = sum(2,5);
   expect(restult).toBe(2+5)
 })
