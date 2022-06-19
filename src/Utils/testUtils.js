@@ -32,12 +32,10 @@ export const renderWithrouter = (component, option = {}) => {
 };
 export const render = (component, option = {}) => {
   const queryCache = new QueryCache();
-  const history = createMemoryHistory();
   return RTL(
     <ThemeProvider theme={defaultTheme}>
       <ColorModeProvider>
         <CSSReset />
-
         <ReactQueryCacheProvider queryCache={queryCache}>
           {component}
         </ReactQueryCacheProvider>
