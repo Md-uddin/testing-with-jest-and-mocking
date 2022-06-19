@@ -8,7 +8,17 @@ import {
 } from "@chakra-ui/core";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
+import jsdom from "jsdom";
+const dom = new jsdom.JSDOM("<!doctype html><html><body></body></html>");
 
+global.window = dom.window;
+global.document = dom.window.document;
+global.navigator = dom.window.navigator;
+
+// new lines
+global.Node = dom.window.Node;
+require("mutationobserver-shim");
+global.MutationObserver = global.window.MutationObserver;
 const PostManage = ({
   onSubmit,
   defaultTitle = "",

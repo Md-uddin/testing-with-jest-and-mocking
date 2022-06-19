@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.1",
     "concurrently": "^5.3.0",
     "json-server": "^0.16.1",
     "msw": "^0.42.1",

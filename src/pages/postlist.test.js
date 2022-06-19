@@ -80,7 +80,7 @@ describe("postlist", () => {
     //Assertion
     renderWithrouter(<PostList isDrawerOpen={false} closeDrawer={jest.fn()} />);
     const data = screen.getAllByTestId("list-item").map((li) => li.textContent);
-    console.log(data);
+    // console.log(data);
 
     expect(data).toMatchInlineSnapshot(`
       Array [
