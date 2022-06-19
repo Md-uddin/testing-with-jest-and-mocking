@@ -25,10 +25,13 @@ in testing for organizing
 
 // #As we do mocking frequently and inorder to avoid code duplication we need to add that code in settup.Tests.js which will be globally available in all tests.
 
-//install msw for making a mocked server test 
-
+//install msw for making a mocked server test
 
 ////for testing hooks we need to add a package
 -npm i --save-dev @testing-library/react-hooks
 
 ///when we are testing hooks and changing the state it should be wrapped in act func
+
+//when ever fetching the data should use mocked server for testing purposes
+
+//note:- when use toMatchInlineSnapshot() this should be empty before every code run
